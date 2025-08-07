@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <title>🌟 MoodTunes: Let Your Emotions Pick the Playlist 🎧✨</title>
+  <link rel="stylesheet" href="kirthi.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <h1 id="mainHeading">🌟 MoodTunes: Let Your Emotions Pick the Playlist 🎧✨</h1>
+    <div class="subtitle" id="subtitle">Enter your mood and get music magic</div>
+
+    <div class="moods">
+      <button data-mood="happy">😊 Happy</button>
+      <button data-mood="sad">😢 Sad</button>
+      <button data-mood="energetic">⚡ Energetic</button>
+      <button data-mood="relaxed">😌 Relaxed</button>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search by song or artist...">
+      <button onclick="searchSongs()">Search</button>
+    </div>
+
+    <div id="loader"></div>
+    <div class="playlist-container" id="playlist"></div>
+  </div>
+
+  <div class="modal" id="welcomeModal">
+    <div class="modal-content">
+      <h2>Welcome to Mood Playlist! 🎶</h2>
+      <p>Enter your name to personalize your experience:</p>
+      <input type="text" id="userName" placeholder="Your name..." />
+      <button onclick="startApp()">Start Listening</button>
+    </div>
+  </div>
+
+  <div class="modal" id="moodPopup">
+    <div class="modal-content">
+      <h3 id="moodMessage">Loading...</h3>
+      <button onclick="closeMoodPopup()">Continue</button>
+    </div>
+  </div>
+
+  <script src="kirthi.js"></script>
+</body>
+</html>
